@@ -1,9 +1,11 @@
 <?php
 $tabC = [ 32 , 40 ,27 , 12 , 56 ];
 $tabF = array_map(fn($n)=>$n * 9/5 + 32 , $tabC);
-print_r($tabC)  ;
-echo "<br>" ;
-print_r($tabF);
+// echo "<br>" ;
+echo "C to F : " ;
+echo implode("F ; " ,$tabF);
+// print_r($tabF);
+
 echo "<br>" ;
 $tabN = [12, 34 , 13 , 67 , 78 , 89 , 31]; 
 $taEntier = array_filter($tabN , fn($n)=>$n % 2 == 0);
