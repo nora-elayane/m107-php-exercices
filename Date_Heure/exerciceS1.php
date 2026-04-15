@@ -38,7 +38,7 @@ foreach ($reservations as $key => $value) {
         $courte = $j ;
         $idc = $key ;
     }
-    $total = ($durée->m * 30 + $durée->d ) * $value['prix_nuit'] ;
+    $total = ($durée->days ) * $value['prix_nuit'] ;
     $revenue += $total ;
     $A = strtotime(date("d-m-Y")) ;
     $D = strtotime($value['date_départ']) ;
