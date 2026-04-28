@@ -1,5 +1,5 @@
 <?php
-if($_SERVER['request_method'] == "get"){
+if($_SERVER['request_method'] == "POST"){
 $img=  $_FILES['img'];
 $maxsize = 2 ; 
 if($img['size'] > $maxsize*1024 *1024){
@@ -16,7 +16,7 @@ if($img['size'] > $maxsize*1024 *1024){
     <title>Document</title>
 </head>
 <body> 
-    <form action="" enctype="multipart/form-data" method="get" >
+    <form action="" enctype="multipart/form-data" method="POST" >
         <input type="file" required name="img" >
         <button type="submit">Envoyer</button>
     </form>
