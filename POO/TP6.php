@@ -1,4 +1,11 @@
 <?php
+
+// 1. Créez une classe abstraite Notification avec : $destinataire , $message , et une méthode abstraite envoyer() .
+// 2. Implémentez NotificationEmail : envoyer() affiche "Email envoyé à [dest] : [msg]". Ajoutez $emailAdresse .
+// 3. Implémentez NotificationSMS : envoyer() affiche "SMS envoyé au [tel] : [msg]". Ajoutez $telephone .
+// 4. Implémentez NotificationPush : affiche "Notification push : [msg]".
+// 5. Créez un tableau de notifications mixtes, envoyez-les toutes.
+
 abstract class Notification{
     protected $destinataire ; 
     protected $message ; 
