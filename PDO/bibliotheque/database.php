@@ -27,7 +27,7 @@ class DataBase{
    }
    //read : 
    public function select(){
-      $p = $this->pdo->query("SELECT * FROM livres") ; 
+      $p = $this->pdo->query("SELECT * FROM livres order by isbn_livre limit 3") ; 
       return $p->fetchAll(PDO::FETCH_ASSOC) ; 
    }
    //update : 
@@ -44,11 +44,11 @@ class DataBase{
 
 $db = new DataBase() ; 
 // echo $db->insert("isbn2" , "Clean code" , "Nora Elayane" , 234 , 200) ;
-$db->update("Clean" , "Nora Elayane" , 234 , 200 , "isbn1") ;
-$db->delete("isbn2") ; 
-echo "<pre>" ; 
-print_r( $db->select()) ;
-echo "</pre>" ;
+// $db->update("Clean" , "Nora Elayane" , 234 , 200 , "isbn1") ;
+// $db->delete("isbn2") ; 
+// echo "<pre>" ; 
+// print_r( $db->select()) ;
+// echo "</pre>" ;
 
 
 ?>
