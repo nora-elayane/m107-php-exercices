@@ -4,7 +4,6 @@ class DataBase{
    public function  __construct(){
       try {
              $this->pdo = new PDO("mysql:host=localhost;dbname=bibliotheque;charset=utf8" , "root" , "") ;
-             echo "connexion avec succée" ;
              $this->pdo->query("CREATE TABLE IF NOT EXISTS livres(isbn_livre VARCHAR(30) PRIMARY KEY NOT NULL UNIQUE 
                               , titre_livre VARCHAR(40) NOT NULL , nomcomplet_auteur VARCHAR(40) NOT NULL 
                               , nb_pages INT NOT NULL , prix FLOAT NOT NULL)");
