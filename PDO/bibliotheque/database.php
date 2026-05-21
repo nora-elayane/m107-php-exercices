@@ -40,6 +40,7 @@ class DataBase{
       $stm = $this->pdo->prepare("DELETE FROM livres WHERE isbn_livre= ?") ;
       $stm->execute([$id]) ; 
    }
+   //valider image :
    public function valideImage($image){
       $types = ["image/png" => ".png" , "image/jpg" => ".jpg" , "image/jpeg" => ".jpeg"];
       $finfo = new finfo(FILEINFO_MIME_TYPE) ;
@@ -50,6 +51,7 @@ class DataBase{
          return false ;
       }
    }
+   //ajouter image  
    public function ajouterImage($image){
       $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
       $img = uniqid() . "." . $ext ;
